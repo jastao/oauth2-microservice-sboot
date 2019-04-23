@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared #notify spring to find the config file here.
+  profiles:
+    active: native #native because we use a git repo by default
+  security:
+    user:
+      name: user
+      password: temp1234
+server:
+  port: 8888 #port for config server
