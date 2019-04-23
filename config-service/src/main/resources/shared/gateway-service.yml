@@ -1,0 +1,19 @@
+zuul:
+  ignoredServices: '*'  #to skip having a service automatically added
+  host:
+    connect-timeout-millis: 20000 #use if configured Zuul routes by specifying URL
+    socket-timeout-millis: 20000
+  routes:
+    oauth-service:
+      path: /userinfo/**
+      url: oauth-service
+      stripPrefix: false
+      sensitiveHeaders:
+    account-service:
+      path: /accounts/**
+      serviceId: account-service
+      stripPrefix: false
+      sensitiveHeaders:
+
+server:
+  port: 8080

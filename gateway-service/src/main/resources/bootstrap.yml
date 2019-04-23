@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: gateway-service # name of the application
+  cloud:
+    config:
+      url: http://localhost:8888 where the config-service is running
+      fail-fast: true #serivce will not run if config-service is not up
+      username: user
+      password: temp1234

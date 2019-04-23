@@ -1,0 +1,16 @@
+#This file is for spring to know where the configuration file is and contains the initial configuration
+spring:
+  application:
+    name: registry-service # name of the application
+  cloud:
+    config:
+      uri: http://localhost:8888 #where the config-service is running
+      fail-fast: true #serivce will not run if config-service is not up
+      username: user
+      password: temp1234
+eureka:
+  instance:
+    prefer-ip-address: true # when the application registers with eureka, it uses its IP address rather than its hostname
+  client:
+    register-with-eureka: false
+    fetch-registry: false
