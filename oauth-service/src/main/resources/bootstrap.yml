@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: oauth-service
+  cloud:
+    config:
+      url: http://localhost:8888
+      fail-fast: true
+      username: user
+      password: temp1234

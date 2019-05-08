@@ -1,0 +1,17 @@
+security:
+  oauth2:
+    client:
+      clientId: appsecret
+      clientSecret: WsHMbLzoKddgHzD9fC69RtWDj91VojWM
+      accessTokenUri: http://localhost:8081/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+server:
+  servlet:
+    context-path: /accounts
+  port: 8082
+
+feign:
+  hystrix:
+    enabled: true
